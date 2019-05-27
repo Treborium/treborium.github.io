@@ -1,3 +1,71 @@
 body {
+    background: #CCC;
+    font-family: 'Roboto', sans-serif;
+    display: table;
+    margin: 0 auto;
+}
+
+.content {
     background: #DDD;
+    margin: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.header {
+    padding: 20px;
+}
+
+.blog-posts {
+    display: table;
+    margin: 0 auto;
+}
+
+.thumbnail {
+    height: auto;
+    width: auto;
+    max-width: 150px;
+    max-height: 100px;
+}
+
+.post {
+    width: 500px;
+    overflow: hidden; /* will contain if .post-left is longer than .post-right */
+    margin: 25px;
+    padding: 10px;
+    background: #EEE;
+
+}
+
+.post-left {
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+
+.post-right {
+    overflow: hidden; /* prevent .post-right from wrapping below .post-left */
+    height: 100%;
+}
+
+.post-right-bottom {
+    height: 100%;
+}
+
+.post-title {
+    color: #2a3a4a;
+    font-size: 130%;
+}
+
+.post-meta-info {
+    color: #798999;
+    font-size: 80%;
+    bottom: 0;
+    right: 0;
+}
+
+.home-button {
+    text-decoration: none;
+    font-size: 200%;
+    color: #1a2a3a;
 }
