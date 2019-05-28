@@ -7,7 +7,8 @@ body {
 
 .content {
     background: #DDD;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     text-align: center;
 }
 
@@ -47,8 +48,11 @@ body {
 }
 
 .thumbnail {
-    max-height: 100%;
+    float: left;
+    height: auto;
     width: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .card {
@@ -69,7 +73,7 @@ body {
 }
 
 .post-left {
-    width: 190px;
+    width: 40%;
     height: 100%;
     float: left;
 }
@@ -98,6 +102,12 @@ body {
 
 .clickable {
     cursor: pointer;
+}
+
+#post-content {
+    background: #e5e5e5;
+    text-align: justify;
+    padding: 20px 40px;
 }
 
 
