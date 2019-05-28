@@ -5,7 +5,7 @@ function toggleMenu() {
     this.classList.toggle("change");
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+window.onload = function() {
     /* Register event listeners */
     document.getElementsByClassName("hamburger-menu")[0].addEventListener("click", toggleMenu, false);
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     posts = document.getElementById("posts")
     render(cardContainerTemplate(cards), posts);
-}, false);
+}
 
 function getCardTemplate() {
     return (data) => html `
