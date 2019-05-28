@@ -1,8 +1,11 @@
 import { html, render } from 'https://unpkg.com/lit-html?module';
 
-function toggleMenu(x) {
-    x.classList.toggle("change");
+function toggleMenu() {
+    // This refers to the hamburger-menu div
+    this.classList.toggle("change");
 }
+
+document.getElementsByClassName("hamburger-menu")[0].addEventListener("click", toggleMenu, false);
 
 window.addEventListener("DOMContentLoaded", function() {
     const cardTemplate = getCardTemplate();
@@ -31,7 +34,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 function getCardTemplate() {
     return (data) => html `
-        <div class="card clickable" id="card-template">
+        <div class="card clickable" id="card-template" onclick="location.href='post.html'">
             <div class="post-left">
                 <img class="thumbnail" src="img/dummy.png" alt="thumbnail" />
             </div>
