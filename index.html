@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 </head>
 
 <body>
@@ -31,21 +31,23 @@
             </div>
         </div>
 
+        <div id="posts"></div>
+    </div>
 
-        <div class="blog-posts" id="posts">
-            <div class="card clickable" id="card-template">
-                <div class="post-left">
-                    <img class="thumbnail" src="img/dummy.png" alt="thumbnail" />
-                </div>
-                <div class="post-right">
-                    <h2 class="post-title">My super amazing Title!</h2>
-                    <div class="post-right-bottom">
-                        <h3 class="post-meta-info">Python - 21. May 2019</h3>
-                    </div>
+
+    <template>
+        <div class="card clickable" id="card-template">
+            <div class="post-left">
+                <img class="thumbnail" src="img/dummy.png" alt="thumbnail" />
+            </div>
+            <div class="post-right">
+                <h2 class="post-title">My super amazing Title!</h2>
+                <div class="post-right-bottom">
+                    <h3 class="post-meta-info">Python - 21. May 2019</h3>
                 </div>
             </div>
         </div>
-    </div>
+    </template>
 
 </body>
 
