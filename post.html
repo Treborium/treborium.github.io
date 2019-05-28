@@ -4,13 +4,34 @@
 <head>
     <title>Post Title</title>
     <link rel="icon" href="img/me.svg">
+    <link rel="stylesheet" href="index.css">
 
     <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
     <script type="module" src="post.js"></script>
 </head>
 
 <body>
-    <h1>Here is the content of a post</h1>
+    <div class="content">
+        <div class="header">
+            <div class="header-left header-section">
+                <img class="about-me-icon clickable" src="img/me.svg" alt="about me icon" onclick="location.href='aboutme.html'" />
+            </div>
+
+            <div class="header-middle header-section">
+                <span onclick="location.href='index.html'" class="home-button clickable underline">Treborium</span>
+            </div>
+
+            <div class="header-right header-section">
+                <div class="hamburger-menu clickable">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="post-content"></div>
+    </div>
 </body>
 
 </html>
