@@ -1,3 +1,5 @@
 var md = new Remarkable();
 
-document.body.innerHTML = md.render("# This is some markdown");
+fetch("posts/post1.md")
+    .then(response => response.text())
+    .then(text => document.body.innerHTML = md.render(text));
