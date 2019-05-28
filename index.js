@@ -1,13 +1,15 @@
 import { html, render } from 'https://unpkg.com/lit-html?module';
 
 function toggleMenu() {
-    // This refers to the hamburger-menu div
+    // `this` refers to the hamburger-menu div
     this.classList.toggle("change");
 }
 
-document.getElementsByClassName("hamburger-menu")[0].addEventListener("click", toggleMenu, false);
+document.addEventListener("DOMContentLoaded", function() {
+    /* Register event listeners */
+    document.getElementsByClassName("hamburger-menu")[0].addEventListener("click", toggleMenu, false);
 
-window.addEventListener("DOMContentLoaded", function() {
+
     const cardTemplate = getCardTemplate();
     const cardContainerTemplate = getCardContainerTemplate();
 
