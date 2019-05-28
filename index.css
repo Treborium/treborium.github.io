@@ -14,7 +14,7 @@ body {
 .header {
     height: 100px;
     width: 100%;
-    background: yellow;
+    /* background: yellow; */
 }
 
 .header-section {
@@ -25,23 +25,23 @@ body {
 
 .header-left {
     width: 19%;
-    background: blue;
+    /* background: blue; */
 }
 
 .header-middle {
     width: 60%;
-    background: green;
+    /* background: green; */
+    
 }
 
 .header-right {
+    /* background: red; */
     width: 19%;
-    background: red;
 }
 
 .home-button {
     font-size: 2em;
     color: #1a2a3a;
-    vertical-align: top;
 }
 
 .about-me-icon {
@@ -98,12 +98,14 @@ body {
     right: 0;
 }
 
-
+.clickable {
+    cursor: pointer;
+}
 
 /********************** Hamburger Menu **********************/
 
 .hamburger-menu {
-  cursor: pointer;
+    display: inline-block;
 }
 
 .bar1, .bar2, .bar3 {
