@@ -7,38 +7,67 @@ body {
 
 .content {
     background: #DDD;
-    margin: 50px;
-    width: 100%;
+    width: 800px;
     text-align: center;
 }
 
 .header {
-    padding: 20px;
+    height: 100px;
+    width: 100%;
+    background: yellow;
 }
 
-.blog-posts {
-    display: table;
-    margin: 0 auto;
+.header-left {
+    width: 19%;
+    height: 100%;
+    display: inline-block;
+    background: blue;
+}
+
+.header-middle {
+    width: 60%;
+    height: 100%;
+    background: green;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.header-right {
+    width: 19%;
+    height: 100%;
+    background: red;
+    display: inline-block;
 }
 
 .thumbnail {
-    height: 100%;
+    max-height: 100%;
     width: auto;
 }
 
+.about-me-icon {
+    max-width: 80px;
+    max-height: auto;
+    float: left;
+}
+
+.blog-posts {
+    background: purple;
+}
+
 .card {
-    width: 500px;
-    height: 150px;
+    width: 90%;
+    height: 160px;
     overflow: hidden; /* will contain if .post-left is longer than .post-right */
-    margin: 25px;
+    margin: 50px auto;
     padding: 10px;
     background: #EEE;
+    display: block;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
 
 .post-left {
-    width: 200px;
+    width: 190px;
     height: 100%;
     float: left;
 }
@@ -54,26 +83,25 @@ body {
 
 .post-title {
     color: #2a3a4a;
-    font-size: 130%;
+    font-size: 1.0vw;
 }
 
 .post-meta-info {
     color: #798999;
-    font-size: 80%;
+    font-size: 0.75vw;
     bottom: 0;
     right: 0;
 }
 
 .home-button {
-    text-decoration: none;
-    font-size: 200%;
+    font-size: 2em;
     color: #1a2a3a;
+    vertical-align: top;
 }
 
 /********************** Hamburger Menu **********************/
 
 .hamburger-menu {
-  float: right;
   cursor: pointer;
 }
 
