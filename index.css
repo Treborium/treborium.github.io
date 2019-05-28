@@ -17,37 +17,42 @@ body {
     background: yellow;
 }
 
-.header-left {
-    width: 19%;
+.header-section {
     height: 100%;
     display: inline-block;
+    vertical-align: top;
+}
+
+.header-left {
+    width: 19%;
     background: blue;
 }
 
 .header-middle {
     width: 60%;
-    height: 100%;
     background: green;
-    display: inline-block;
-    vertical-align: top;
 }
 
 .header-right {
     width: 19%;
-    height: 100%;
     background: red;
-    display: inline-block;
 }
 
-.thumbnail {
-    max-height: 100%;
-    width: auto;
+.home-button {
+    font-size: 2em;
+    color: #1a2a3a;
+    vertical-align: top;
 }
 
 .about-me-icon {
     max-width: 80px;
     max-height: auto;
-    float: left;
+}
+
+
+.thumbnail {
+    max-height: 100%;
+    width: auto;
 }
 
 .blog-posts {
@@ -93,11 +98,7 @@ body {
     right: 0;
 }
 
-.home-button {
-    font-size: 2em;
-    color: #1a2a3a;
-    vertical-align: top;
-}
+
 
 /********************** Hamburger Menu **********************/
 
