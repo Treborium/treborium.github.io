@@ -60,6 +60,7 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background: #EEE;
     transition: 0.4s;
+    border-radius: 5px;
 }
 
 .card:hover {
