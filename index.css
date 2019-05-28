@@ -15,7 +15,7 @@ body {
     padding: 20px;
     height: 100px;
     width: 100%;
-    /* background: yellow; */
+    box-sizing: border-box;
 }
 
 .header-section {
@@ -26,22 +26,19 @@ body {
 
 .header-left {
     width: 19%;
-    /* background: blue; */
 }
 
 .header-middle {
     width: 60%;
-    /* background: green; */
 }
 
 .header-right {
-    /* background: red; */
     width: 19%;
 }
 
 .home-button {
-    font-size: 2em;
-    color: #1a2a3a;
+    font-size: 3em;
+    color: #2a3a4a;
 }
 
 .about-me-icon {
@@ -145,6 +142,33 @@ ul {
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+/**************************************************************/
+
+
+/********************** Underline Effect **********************/
+
+.underline {
+    position: relative;
+}
+
+.underline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fc2f70;
+    transform-origin: center;
+    transform: translate(-50%, 0) scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.underline:hover::before {
+    transform: translate(-50%, 0) scaleX(1);
 }
 
 
