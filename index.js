@@ -36,7 +36,7 @@ window.onload = function() {
 
 function getCardTemplate() {
     return (data) => html `
-        <div class="card clickable" id="card-template" onclick="location.href='post.html'">
+        <div class="card clickable" onclick="location.href='post.html'">
             <div class="post-left">
                 <img class="thumbnail" src="img/dummy.png" alt="thumbnail" />
             </div>
