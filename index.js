@@ -30,7 +30,7 @@ window.onload = function() {
     cards.push(cardTemplate(data2))
 
 
-    posts = document.getElementById("posts")
+    const posts = document.getElementById("posts")
     render(cardContainerTemplate(cards), posts);
 }
 
