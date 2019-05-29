@@ -1,0 +1,68 @@
+@import 'colors';
+@import 'base';
+@import 'header';
+.thumbnail {
+    float: left;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card {
+    display: inline-block;
+    width: 85%;
+    max-width: $max-width-monitor;
+    height: 160px;
+    margin: 40px auto;
+    padding: 10px;
+    box-shadow: 0px 4px 4px $shadow-color;
+    background: #EEE;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 5px 10px 4px $shadow-color;
+    background: #F3F3F3;
+}
+
+.post-left {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.post-right {
+    /* prevent .post-right from wrapping below .post-left */
+    overflow: hidden;
+    height: 100%;
+}
+
+.post-right-bottom {
+    height: 100%;
+}
+
+.post-title {
+    color: $primary-text-color;
+    font-size: 1.2em;
+}
+
+.post-meta-info {
+    color: $meta-text-color;
+    font-size: 0.75em;
+    bottom: 0;
+    right: 0;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .content {
+        width: 100%;
+    }
+    .card {
+        max-width: 100%;
+    }
+    .header {
+        max-width: 100%;
+    }
+}

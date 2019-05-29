@@ -1,0 +1,17 @@
+@import 'colors';
+body {
+    background: $background-color;
+    font-family: 'Roboto', sans-serif;
+    display: table;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+}
+
+.clickable {
+    cursor: pointer;
+}

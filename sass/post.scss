@@ -1,0 +1,10 @@
+@import 'colors';
+@import 'base';
+@import 'header';
+#post-content {
+    background: $background-color-light;
+    text-align: justify;
+    padding: 20px 40px;
+    max-width: $max-width-monitor;
+    box-sizing: border-box;
+}
