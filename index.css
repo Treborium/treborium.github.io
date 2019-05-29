@@ -17,7 +17,6 @@ body {
     height: 100px;
     width: 100%;
     box-sizing: border-box;
-    background: purple;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -30,17 +29,14 @@ body {
 
 .header-left {
     width: 19%;
-    background: red;
 }
 
 .header-middle {
     width: 60%;
-    background: blue;
 }
 
 .header-right {
     width: 19%;
-    background: yellow;
 }
 
 .home-button {
