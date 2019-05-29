@@ -8,3 +8,8 @@
     max-width: $max-width-monitor;
     box-sizing: border-box;
 }
+
+#gradient {
+    background-image: linear-gradient($background-color, $background-color-light);
+    height: 100px;
+}

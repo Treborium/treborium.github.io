@@ -112,11 +112,16 @@ body {
 }
 
 #post-content {
-  background: #e5e5e5;
+  background: #EEE;
   text-align: justify;
   padding: 20px 40px;
   max-width: 1000px;
   box-sizing: border-box;
+}
+
+#gradient {
+  background-image: linear-gradient(#DDD, #EEE);
+  height: 100px;
 }
 
 /*# sourceMappingURL=post.css.map */
