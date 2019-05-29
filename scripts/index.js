@@ -5,6 +5,11 @@ function toggleMenu() {
     this.classList.toggle("change");
 }
 
+function setClickedCardState(data) {
+    sessionStorage.setItem('data', JSON.stringify(data));
+}
+
+
 window.onload = function() {
     /* Register event listeners */
     document.getElementsByClassName("hamburger-menu")[0].addEventListener("click", toggleMenu, false);
@@ -34,9 +39,10 @@ window.onload = function() {
     render(cardContainerTemplate(cards), posts);
 }
 
+
 function getCardTemplate() {
     return (data) => html `
-        <div class="card clickable" onclick="location.href='post.html'">
+        <div class="card clickable" @click=${setClickedCardState(data)} onclick="location.href='post.html'">
             <div class="post-left">
                 <img class="thumbnail" src="img/dummy.png" alt="thumbnail" />
             </div>
@@ -49,6 +55,7 @@ function getCardTemplate() {
         </div>
     `;
 }
+
 
 function getCardContainerTemplate() {
     return (cards) => html `
