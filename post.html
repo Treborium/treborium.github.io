@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
     <title>Post Title</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Robert Fuchs">
+    <meta name="description" content="The personal blog of Robert Fuchs (Treborium).
+    This blog is mostly for developers with posts about different aspects of programming,
+    but also with random content about other stuff.">
+
     <link rel="icon" href="img/me.svg">
     <link rel="stylesheet" href="index.css">
 
     <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
-    <script type="module" src="post.js"></script>
 </head>
 
 <body>
     <div class="content">
         <div class="header">
             <div class="header-left header-section">
-                <img class="about-me-icon clickable" src="img/me.svg" alt="about me icon" onclick="location.href='aboutme.html'" />
+                <a href="aboutme.html">
+                    <img class="about-me-icon clickable" src="img/me.svg" alt="about me icon" />
+                </a>
             </div>
 
             <div class="header-middle header-section">
@@ -32,6 +39,7 @@
 
         <div id="post-content"></div>
     </div>
+    <script type="module" src="post.js"></script>
 </body>
 
 </html>
