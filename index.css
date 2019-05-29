@@ -1,5 +1,5 @@
 body {
-    background: #CCC;
+    background: #DDD;
     font-family: 'Roboto', sans-serif;
     display: table;
     margin: 0 auto;
@@ -115,7 +115,7 @@ body {
     max-width: 1000px;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
     .content {
         width: 100%;
     }
