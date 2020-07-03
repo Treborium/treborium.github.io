@@ -1,150 +1,132 @@
-# texture
+### devlopr-jekyll - A Beautiful Jekyll Theme Built for Developers
 
-A configurable jekyll theme for simply beautiful blogs.
+[![Gem Version](https://badge.fury.io/rb/devlopr.svg)](https://badge.fury.io/rb/devlopr)![workflow-badge](https://github.com/sujaykundu777/devlopr-jekyll/workflows/deploy/badge.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4232ac2b-63e0-4c78-92e0-e95aad5ab8c3/deploy-status)](https://app.netlify.com/sites/devlopr/deploys)
+![](https://ruby-gem-downloads-badge.herokuapp.com/devlopr?type=total&color=brightgreen&style=plastic)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
-**Demo**: [thelehhman.com/texture](https://thelehhman.com/texture)
+Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup.
+The Theme supports both Light and Dark Style. Highly Customizable and No Hosting or Maintainence Cost is required !
 
-![texture theme preview](/screen1.png)
+### [Installation Guide](https://devlopr.netlify.app/get-started)
 
+![devlopr jekyll](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/screenshot.PNG?raw=true)
 
-## Installation on Github Pages
+devlopr uses Markdown Files to create data like Blog Posts, Gallery, Shop Products etc. No external database is required.
 
-Add this line to your site's `_config.yml`:
-```yaml
-remote_theme: thelehhman/texture
-```
+### Deploy your devlopr-jekyll blog - One Click Deploy
 
-**NOTE: If you are forking this repo, remove `base_url: /texture` in the `_config.yml` which is required to load the required website assets**
-## Installation
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/sujaykundu777/devlopr-jekyll)
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sujaykundu777/devlopr-jekyll)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sujaykundu777/devlopr-jekyll)
 
-Add this line to your Jekyll site's `Gemfile`:
+### Demo (Hosted Apps)
 
-```ruby
-gem "texture"
-```
+- Github Pages Demo - [here](https://sujaykundu.com)
+- Firebase Demo - [here](https://devlopr.web.app)
+- Netlify Demo - [here](https://devlopr.netlify.com)
+- Zeit Now Demo - [here](https://devlopr-jekyll.now.sh)
+- Heroku Demo - [here](https://devlopr-jekyll.herokuapp.com)
+- AWS Amplify Demo - [here](https://master.d3t30wwddt6jju.amplifyapp.com/)
 
-And add this line to your Jekyll site's `_config.yml`:
+#### Features :
 
-```yaml
-theme: texture
-```
+- Local CMS Admin Support using [Jekyll Admin](https://jekyll.github.io/jekyll-admin/)
+- Onine CMS Admin Support using [Netlify CMS](https://sujaykundu.com/jekyll/2020/05/24/how-to-setup-netlify-cms-with-github-hosted-devlopr-blog/#/), Forestry, [Siteleaf](https://sujaykundu.com/jekyll/2019/05/22/using-siteleaf/), CloudCannon.
+- Supports Latest [Jekyll 4.x](https://jekyllrb.com) and [Bundler](https://bundler.io)
+- Stylesheet built using Sass
+- Comments using [Hyvor](https://talk.hyvor.com/) and [Disqus](https://disqus.com/)
+- SEO-optimized
+- Real Time Search using [Algolia](https://algolia.com/)
+- Sell Stuff (Ecommerce) in your Blog using [Snipcart](https://snipcart.com/)
+- Send Newsletters using [Mailchimp](https://mailchimp.com/)
+- Contact Forms using [Formspree](https://formspree.io/)
+- Coding Activity using [Wakatime](https://wakatime.com/)
+- Hosting Support for [Github Pages](https://pages.github.com), [Netlify](https://netlify.com), [Zeit](https://zeit.co), [Heroku](https://heroku.com), [AWS Amplify](aws.amplify.com), [Firebase](https://firebase.com)
+- CI/CD Support using [Travis CI](https://sujaykundu.com/blog/posts/deploy-jekyll-blog-using-github-pages-and-travis-ci/), Buddy , Circle CI
 
-And then execute:
+#### Jekyll Admin
+You can easily manage the site locally using the Jekyll admin : [http://localhost:4000/admin](http://localhost:4000/admin)
 
-    $ bundle
+![Jekyll Admin](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/jekyll-admin.PNG?raw=true)
 
-Or install it yourself as:
+#### Search Configuration
 
-    $ gem install texture
+Replace *_algolia_api_key* content with your algolia's app Admin API key and run to index blog posts:
 
-## Usage
+`jekyll algolia`
 
-The "texture" key in _config.yml is used to customize the theme data.
-```yaml
-texture:
-  title: Adam Denisov
-  tagline: Developer. Designer
-  date_format: "%b %-d, %Y"
+For more info : [Docs here](https://sujaykundu.com/jekyll/2020/06/18/how-to-add-realtime-search-to-your-devlopr-jekyll-blog-using-jekyll-algolia/)
 
-  social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman # format: locale/username
-```
+## Release Changes :
 
-**Styling**
+You can check out the latest changes [here](https://www.buymeacoffee.com/p/57109)
 
-Multiple header styles are supported using the "style" property under texture in `_config.yml`.
+## Using Docker :
 
-```yaml
-texture:
-  style: [yellow|red|black|blue|green|purple]
-```
+Building the Image :
 
-For example, the blue style looks like this:
+`docker build -t my-devlopr-jekyll-blog .`
 
-![texture theme blue](/screen2.png)
+Running the container :
 
+`docker run -d -p 4000:4000 -it --volume="$PWD:/srv/jekyll" --name "my_blog" my-devlopr-jekyll-blog:latest jekyll serve --watch`
 
-**Texture Picker**
+## Using Docker Compose :
 
-You can toggle the texture picker to show/experiment various textures on your site using the showPicker variable. Remember to make it `false` for production.
+### Development :
 
-```yaml
-texture:
-  showPicker: [false|true] # show the texture selector(development purposes)
-```
+You can run the app in development mode : (your changes will be reflected --watch moded)
 
-**Comments (Disqus)**
+Serve the site at http://localhost:4000 :
 
-Comments on posts can be enabled by specifying your disqus_shortname under texture in `_config.yml`. For example,
-```yaml
-texture:
-  disqus_shortname: games
-```
+`docker-compose -f docker-compose-dev.yml up --build --remove-orphans`
 
-**Google Analytics**
+### Production :
 
-It can be enabled by specifying your analytics id under texture in `_config.yml`
-```yaml
-texture:
-  analytics_id: '< YOUR ID >'
-```
+You can run the app in production mode : (your changes will be reflected --watch moded)
 
-**Excerpts**
+Serve the site at http://localhost:4000 :
 
-Excerpts can be enabled by adding the following line to your `_config.yml`
-```yaml
-show_excerpts: true
-```
+`docker-compose -f docker-compose-prod.yml up --build --remove-orphans`
 
-**Toggle Navbar**
+Stop the app :
+`docker-compose -f docker-compose-prod.yml down`
+Once everything is good and ready to go live -
 
-```yaml
-texture:
-  showNav: true
-```
+`docker-compose -f docker-compose-prod.yml up --build --detach`
 
-**Navigation**
+## Contributors:
 
-After setting `showNav` to true navigation can be built by adding the following to your `_config.yml`
+This project exists thanks to all the people who contribute.
 
-```yaml
-texture:
-  navigation:
-    - title: My Work
-      url: "/my-work"
-    - title: Resume
-      url: "/resume"
-```
+Contributions are more than just welcome. Fork this repo and create a new branch, then submit a pull request
 
-**Layouts**
+- 1.Fork it [http://github.com/sujaykundu777/devlopr-jekyll/fork](http://github.com/sujaykundu777/devlopr-jekyll/fork )
 
-- Home
-- Page
-- Post
+- 2.Create your feature branch
+`git checkout -b my-new-feature`
 
-## Contributing
+- 3.Commit your changes
+`git commit -am 'Add some feature'`
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/thelehhman/texture. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+- 4.Push to the branch
+`git push origin my-new-feature`
 
-## Development
+- 5.Create new Pull Request
 
-To set up your environment to develop this theme, run `bundle install`.
+### Backers
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+Thanks to all our Backers ! 🙏 [Become a Backer](https://opencollective.com/devlopr-jekyll#backer)
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `texture.gemspec` accordingly.
+<a href="https://opencollective.com/devlopr-jekyll#backers" target="_blank"><img src="https://opencollective.com/devlopr-jekyll/backers.svg?width=890" /></a>
 
-## Donation
-If this project help you reduce time to develop, you can give me a cup of coffee :) 
+### For Help :
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/thelehhman)
+You can contact me, if you need any help via [Email](mailto:sujaykundu777@gmail.com). If you like the project. Don't forget to :star: !
 
-## License
+## Licence
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT). You can do anything you want, including projects for your clients, as long as you mention an attribution back (credit links in footer). See the [Licence](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/LICENSE) file
 
-## More Themes
-[plainwhite](https://github.com/thelehhman/plainwhite-jekyll)
+I understand that sometimes footer links or any links to external websites are not convenient, so you have the option to remove credits/footer links by becoming a [Backer](https://opencollective.com/devlopr-jekyll#backer).

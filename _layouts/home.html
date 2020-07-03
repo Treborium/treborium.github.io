@@ -1,24 +1,57 @@
 ---
-layout: page
+layout: default
 ---
-{%- if site.posts.size > 0 -%}
-<ul class="posts">
-	{%- for post in site.posts -%}
-	<li>
-		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-		<div class="post-meta">
-			<a class="post-link" href="{{ post.url | relative_url }}">
-				<h2 class="post-title">{{ post.title | escape }}</h2>
-			</a>
-			<div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: date_format }}</div>
-		</div>
-		<div class="post">
-			{%- if site.show_excerpts -%}
-			{{ post.excerpt }}
-			{%- endif -%}
-		</div>
-	</li>
-	{%- endfor -%}
-</ul>
-{%- endif -%}
 
+<script>
+  $(document).ready(function() {
+    $("#typewriteText").typewrite({
+      actions: [{ type: "{{site.typewrite-text}}" }]
+    });
+  });
+</script>
+    <div class="jumbotron" style="text-align: center;">
+      <img class="author-profile-img" src="/assets/img/profile.png" />
+      <p class="jumbotron-heading">Hi, I am {{site.author}} !</p>
+      <p class="lead" id="typewriteText"></p>
+         {%- include github_star_button.html -%}
+         {%- include github_fork_button.html -%}
+    </div>
+    <div class="col-lg-8 offset-md-2">
+      <section id="recent-articles">
+        <div id="recent-articles-header">
+          <div id="recent-articles-title">
+            <h1 class="card-title">Recent Articles</h1>
+          </div>
+          <div id="recent-articles-show-all">
+            <a class="btn btn-lg btn-dark" href="/blog"> View All </a>
+          </div>
+        </div>
+        <br />
+
+        <ul>
+          {% for post in site.posts limit:5 %}
+          <li class="article-card">
+            <a href="{{post.url}}" class="article-card-link">
+              <div id="article-container">
+                <div id="article-img">
+                  <img
+                    src="/assets/img/{{site.author_logo}}"
+                    width="50px"
+                    height="50px"
+                  />
+                </div>
+                <div id="article-link">
+                    <p class="recent-article-link">{{post.title}} <span style="color: #ccc; font-size: 15px;"> - <i><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time></i></span></p>
+                  </div>
+                  <div id="article-alert">
+                  {% for cat in post.category limit:1 %}
+                   <button class="btn btn-sm btn-dark">{{cat}}</button>
+                  {% endfor %}
+                  </div>
+              </div>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
