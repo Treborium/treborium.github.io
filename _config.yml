@@ -1,6 +1,6 @@
-title: Texture Theme
-author: GitHub User
-email: your-email@domain.com
+title: Trebroum's Blog
+author: Treborium
+email: robertfuchs97@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -24,10 +24,10 @@ texture:
 
   # generate social links in footer
   social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
-    rss: rss
+#    twitter: thelehhman
+    github:  treborium
+    linkedIn: in/robert-f-0b87a218a/
+#    rss: rss
  
 
 # If you want to link only specific pages in your header, uncomment
