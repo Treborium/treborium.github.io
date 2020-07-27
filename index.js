@@ -1,6 +1,9 @@
 document.body.onload = listElements;
 
+console.log("Javascript executed");
+
 function listElements() {
+	console.log("Executing function");
 	var link = document.createElement("a")
 	link.href = "posts/sample.html";
 	
