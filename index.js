@@ -4,7 +4,7 @@ document.body.onload = listElements;
 function listElements() {
 	var fs = require('fs');
 	var files = fs.readdirSync("posts/");
-	console.log(files);
+	console.log("Files: " + files);
 
 	var link = document.createElement("a")
 	link.href = "posts/sample.html";
