@@ -1,9 +1,11 @@
+console.log("Page loaded.");
 document.body.onload = listElements;
 
-console.log("Javascript executed");
-
 function listElements() {
-	console.log("Executing function");
+	var fs = require('fs');
+	var files = fs.readdirSync("posts/");
+	console.log(files);
+
 	var link = document.createElement("a")
 	link.href = "posts/sample.html";
 	
@@ -12,4 +14,5 @@ function listElements() {
 
 	var links = document.getElementById("links");
 	document.body.insertBefore(link, links);
+	console.log("Function executed.");
 }
